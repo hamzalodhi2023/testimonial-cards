@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+  /* border: 1px solid #fff; */
+  width: 100%;
+  min-height: 100dvh;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.37),
+      rgba(0, 0, 0, 0.37)
+    ),
+    url(ries-bosch-0_FbSGh-5mI-unsplash.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card {
+  /* border: 1px solid #fff; */
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.315),
+    rgba(255, 255, 255, 0.055)
+  );
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.555);
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.6s;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.card:hover p {
+  opacity: 0;
+  left: 100%;
+}
+
+.card:hover .social-media-icons {
+  opacity: 100%;
+  bottom: 80px;
+}
+
+.card::after {
+  content: "";
+  background-color: white;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  top: 25%;
+  z-index: -1;
+}
+
+.card p {
+  /* border: 1px solid #000; */
+  color: white;
+  width: 100%;
+  text-align: justify;
+  text-align-last: center;
+  opacity: 100%;
+  padding: 0px 20px;
+  transition: 0.3s;
+  position: absolute;
+  top: 220px;
+  left: 0px;
+}
+
+.img-div {
+  border: 5px solid white;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-media-icons {
+  /* border: 1px solid #000; */
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+  left: auto;
+  opacity: 0%;
+  transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social-media-icons i {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-icons i:hover {
+  transform: scale(1.2);
+}
