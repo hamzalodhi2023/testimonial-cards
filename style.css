@@ -40,6 +40,7 @@
   position: relative;
   overflow: hidden;
   transition: 0.6s;
+  margin: 10px 0px;
 
   display: flex;
   align-items: center;
@@ -125,4 +126,14 @@
 
 .social-media-icons i:hover {
   transform: scale(1.2);
+}
+
+@media screen and (max-width: 960px) {
+  #container {
+    /* border: 1px solid #000; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
